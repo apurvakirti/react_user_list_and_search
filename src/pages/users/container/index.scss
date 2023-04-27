@@ -1,0 +1,256 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .user-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    max-width: 400px;
+    min-width: 400px;
+    width: 100%;
+    &:hover {
+        // transform: scale(1.1);
+        cursor: pointer;
+    }
+  }
+
+  .card-image> img {
+    width: 128px;
+    border-radius: 50%;
+    height: 128px;
+    margin: 15px 0px 15px 15px;
+  }
+
+  .card-details {
+    padding-top: 30px;
+    width: 253px;
+  }
+
+  .card-details p{
+    line-height: 1;
+  }
+
+  .details{
+    margin-top: 10px;
+  }
+
+  .user-card .card-details h4 {
+    font-size: 16px;
+    padding: 0 20px 10px;
+    text-align: start;
+    margin-bottom: 5px;
+    color: #323347;
+  }
+
+  .user-card .card-details .username {
+    font-size: 14px;
+    padding: 0 20px 10px;
+    text-align: start;
+    margin-bottom: 5px;
+    color: #323347;
+  }
+
+  .ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+  }
+
+  .user-card .card-details p {
+    font-size: 14px;
+    padding: 0 20px 20px;
+    text-align: justify;
+  }
+
+  .search-box {
+    display: flex;
+    align-self: center;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .search-box input[type="text"] {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .no-data {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+
+  /* Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Flexbox styles */
+  .modal-flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-image {
+    margin-right: 20px;
+  }
+  
+  .modal-image img {
+    width: 128px;
+    border-radius: 50%;
+    height: 128px;
+  }
+  
+  .modal-text {
+    flex-grow: 1;
+  }
+  
+  .modal-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-text p {
+    font-size: 18px;
+  }
+  
+  .title{
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .sub-title{
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  @media screen and (max-width: 920px) {
+    .modal-content {
+        width: 90%;
+      }
+  }
+
+  @media screen and (max-width: 460px) {
+    .uuid {
+        display: none;
+      }
+      .card-details {
+        padding-top: 30px;
+        width: 190px;
+      }
+      .user-card {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+        max-width: auto;
+        min-width: auto;
+        width: 100%;
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+      }
+  }
+
+  @media(max-width: 320px){ 
+    .card-image > img {
+      width: 55px;
+      border-radius: 50%;
+      height: 55px;
+      margin: 45px 0px 15px 15px;
+  }
+}
+  @media(max-width: 420px){ 
+    .modal-image {
+      margin-right: 5px;
+    }
+    .modal-text {
+      flex-grow: 1;
+      width: 80%;
+    }
+    .details-icon {
+      font-size: 10px;
+    }
+    .modal-text p {
+      font-size: 14px;
+    }
+    .modal-email {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .uuid {
+        display: none;
+      }
+    .close {
+      float: none;
+      position: absolute;
+    right: 35px;
+    top: 57px;
+    }
+    .modal-image img {
+      width: 55px;
+      border-radius: 50%;
+      height: 55px;
+    }
+  }
